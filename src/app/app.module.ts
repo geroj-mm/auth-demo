@@ -14,6 +14,10 @@ import { ErrorInterceptor } from '../app/helpers/error.interceptor';
 import { HomeComponent } from '../app/home/home.component';
 import { LoginComponent } from '../app/login/login.component';
 import { NoAccessComponent } from './no-access/no-access.component';
+import { AdminComponent } from './admin/admin.component';
+import { HelpersComponent } from './helpers/helpers.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
     imports: [
@@ -26,7 +30,11 @@ import { NoAccessComponent } from './no-access/no-access.component';
         AppComponent,
         HomeComponent,
         LoginComponent,
-        NoAccessComponent
+        NoAccessComponent,
+        AdminComponent,
+        HelpersComponent,
+        NotFoundComponent,
+        SignupComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
